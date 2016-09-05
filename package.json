@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/minditorrey/medicalEthics.git"
+    "url": "git+https://github.com/minditorrey/feminist-theory.git"
   },
   "engines": {
     "node": "5.10.1",
@@ -19,9 +19,9 @@
   "author": "Mindi Torrey",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/minditorrey/medicalEthics/issues"
+    "url": "https://github.com/minditorrey/feminist-theory/issues"
   },
-  "homepage": "https://github.com/minditorrey/medicalEthics#readme",
+  "homepage": "https://github.com/minditorrey/feminist-theory#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "bower": "^1.7.9",

@@ -1,12 +1,12 @@
 {
-  "name": "medical-ethics",
+  "name": "feminist-theory",
   "description": "",
   "main": "app.js",
   "authors": [
     "Mindi Torrey"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/minditorrey/medicalEthics",
+  "homepage": "https://github.com/minditorrey/feminist-theory",
   "ignore": [
     "**/.*",
     "node_modules",
