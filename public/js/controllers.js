@@ -60,9 +60,9 @@ app.controller('postsController', function($scope, $state, $rootScope, $statePar
         } else if($('#two').is(':checked')) {
             $scope.section = "2";
         } else if($('#three').is(':checked')) {
-            $scope.chapter = "3";
+            $scope.section = "3";
         } else if($('#four').is(':checked')) {
-            $scope.chapter = "4";
+            $scope.section = "4";
 		};
 
     	var post = {
