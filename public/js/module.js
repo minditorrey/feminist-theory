@@ -1,4 +1,4 @@
-var app = angular.module('medicalethicsApp', ['ui.router']);
+var app = angular.module('feministTheoryApp', ['ui.router']);
 
 
 

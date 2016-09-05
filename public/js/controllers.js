@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('medicalethicsApp');
+var app = angular.module('feministTheoryApp');
 
 
 app.controller('homeController', function($scope) {
@@ -50,43 +50,33 @@ app.controller('postsController', function($scope, $state, $rootScope, $statePar
 
     $scope.addPost = function() {
     	$scope.names = $('#names').val();
-		$scope.chapter = $('#chapter').val();
-		$scope.topic = $('#topic').val();
+		$scope.section = $('#section').val();
+		$scope.reading = $('#reading').val();
 		$scope.type = $('#type').val();
 		$scope.text = $('#text').val();
 		
-    	if($('#two').is(':checked')) {
-            $scope.chapter = "2";
+    	if($('#one').is(':checked')) {
+            $scope.section = "1";
+        } else if($('#two').is(':checked')) {
+            $scope.section = "2";
         } else if($('#three').is(':checked')) {
             $scope.chapter = "3";
         } else if($('#four').is(':checked')) {
             $scope.chapter = "4";
-        } else if($('#five').is(':checked')) {
-            $scope.chapter = "5";
-        } else if($('#six').is(':checked')) {
-            $scope.chapter = "6";
-        } else if($('#seven').is(':checked')) {
-            $scope.chapter = "7";
-        } else if($('#eight').is(':checked')) {
-            $scope.chapter = "8";
-        } else if($('#nine').is(':checked')) {
-            $scope.chapter = "9";
-        } else if($('#ten').is(':checked')) {
-            $scope.chapter = "10";
 		};
 
     	var post = {
     		names: $scope.names,
-    		chapter: $scope.chapter,
-    		topic: $scope.topic,
+    		section: $scope.section,
+    		reading: $scope.reading,
     		type: $scope.type,
-    		text: $scope.text,
+    		text: $scope.text
     	}
 		console.log(post);
 
     	$scope.posts.push(post);
 
-    	if (!$scope.names || !$scope.chapter || !$scope.topic || !$scope.type || !$scope.text) {
+    	if (!$scope.names || !$scope.section || !$scope.reading || !$scope.type || !$scope.text) {
         	swal({ 
         		title: "Ooops!", 
         		text: "You must complete all fields. Please click on Add Post again and fill out all fields.",
@@ -150,34 +140,23 @@ app.controller('resourcesController', function($scope, ResourcesService) {
 
     $scope.addResource = function() {
     	$scope.name = $('#resName').val();
-		$scope.chapter = $('#resChapter').val();
 		$scope.topic = $('#resTopic').val();
 		$scope.link = $('#resLink').val();
 		$scope.overview = $('#resOverview').val();
 		
-    	if($('#ctwo').is(':checked')) {
-            $scope.chapter = "2";
+    	if($('#cone').is(':checked')) {
+            $scope.section = "1";
+        } else if($('#ctwo').is(':checked')) {
+            $scope.section = "2";
         } else if($('#cthree').is(':checked')) {
-            $scope.chapter = "3";
+            $scope.section = "3";
         } else if($('#cfour').is(':checked')) {
-            $scope.chapter = "4";
-        } else if($('#cfive').is(':checked')) {
-            $scope.chapter = "5";
-        } else if($('#csix').is(':checked')) {
-            $scope.chapter = "6";
-        } else if($('#cseven').is(':checked')) {
-            $scope.chapter = "7";
-        } else if($('#ceight').is(':checked')) {
-            $scope.chapter = "8";
-        } else if($('#cnine').is(':checked')) {
-            $scope.chapter = "9";
-        } else if($('#cten').is(':checked')) {
-            $scope.chapter = "10";
+            $scope.section = "4";
 		};
 
     	var resource = {
     		name: $scope.name,
-    		chapter: $scope.chapter,
+    		section: $scope.section,
     		topic: $scope.topic,
     		link: $scope.link,
     		overview: $scope.overview
@@ -186,7 +165,7 @@ app.controller('resourcesController', function($scope, ResourcesService) {
 
     	$scope.resources.push(resource);
 
-    	if (!$scope.name || !$scope.chapter || !$scope.topic || !$scope.link || !$scope.overview) {
+    	if (!$scope.name || !$scope.section || !$scope.topic || !$scope.link || !$scope.overview) {
         	swal({ 
         		title: "Ooops!", 
         		text: "You must complete all fields. Please click on Add Resource again and fill out all fields.",
@@ -247,20 +226,24 @@ app.controller('pitchesController', function($scope, PitchesService) {
 
 
     $scope.addPitch = function() {
-    	$scope.name = $('#pitchName').val();
-		$scope.category = $('#pitchCategory').val();
+    	$scope.names = $('#pitchNames').val();
+		$scope.section = $('#pitchCategory').val();
 		$scope.topic = $('#pitchTopic').val();
 		$scope.link = $('#pitchLink').val();
 		
-    	if($('#doctor').is(':checked')) {
-            $scope.category = "Doctors and Patients";
-        } else if($('#death').is(':checked')) {
-            $scope.category = "Life and Death";
-        } 
+    	if($('#pitchOne').is(':checked')) {
+            $scope.section = "1";
+        } else if($('#pitchTwo').is(':checked')) {
+            $scope.section = "2";
+        } else if($('#pitchThree').is(':checked')) {
+            $scope.section = "3";
+        } else if($('#pitchFour').is(':checked')) {
+            $scope.section = "4";
+        }
 
     	var pitch = {
-    		name: $scope.name,
-    		category: $scope.category,
+    		names: $scope.names,
+    		section: $scope.section,
     		topic: $scope.topic,
     		link: $scope.link
     	}
@@ -268,7 +251,7 @@ app.controller('pitchesController', function($scope, PitchesService) {
 
     	$scope.pitches.push(pitch);
 
-    	if (!$scope.name || !$scope.category || !$scope.topic || !$scope.link) {
+    	if (!$scope.name || !$scope.section || !$scope.topic || !$scope.link) {
         	swal({ 
         		title: "Ooops!", 
         		text: "You must complete all fields. Please click on Add Resource again and fill out all fields.",

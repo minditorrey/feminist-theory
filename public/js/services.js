@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('medicalethicsApp');
+var app = angular.module('feministTheoryApp');
 
 app.service('PostsService', function($http) {
 	this.getAll = function() {

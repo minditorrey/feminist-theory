@@ -4,8 +4,8 @@ var mongoose = require('mongoose');
 
 var postSchema = new mongoose.Schema({
     names: { type: String, required: true },
-    chapter: { type: String, required: true },
-    topic: {type: String, required: true },
+    reading: { type: String, required: true },
+    section: {type: String, required: true },
     type: {type: String, required: true },
     text: { type: String, required: true },
     likes: {type: Number, default: 0 },

@@ -34,7 +34,7 @@ header .navbar a:hover {
 }
 
 .feature-image-default {
-	background: url('../images/hero-image.jpg') 100% 0 fixed;
+	background: url('../images/teal.png') 100% 0 fixed;
 	min-height: 300px;
 	padding: 40px 0;
 	color: white;
@@ -115,12 +115,22 @@ footer span.subtitle {
 /*HERO*/
 
 #hero {
-	background: url('../images/hero-image.jpg') 100% 0 fixed;
+	background: url('../images/teal.png') 100% 0;
 	min-height: 500px;
 	padding: 40px 0;
 	color: white;
+	background-repeat:no-repeat;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizelegibility;	
+}
+
+#hero .row {
+	background-color: 
+}
+
+#hero img {
+	width: 100%;
+	margin-top: 5%;
 }
 
 #hero p {

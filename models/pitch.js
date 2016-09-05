@@ -3,8 +3,8 @@
 var mongoose = require('mongoose');
 
 var pitchSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    category: { type: String, required: true },
+    names: { type: String, required: true },
+    section: { type: String, required: true },
     topic: {type: String, required: true },
     link: {type: String, required: true },
     likes: {type: Number, default: 0 },

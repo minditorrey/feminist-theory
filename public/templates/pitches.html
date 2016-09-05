@@ -16,11 +16,17 @@
 	<div id="pitchTabs" class="container">	
 		<ul class="nav nav-pills">
 			<li ng-model="doctor">
-       			<a ng-click="myFilter={category:'Doctors and Patients'}" type="button" data-toggle="tab">Doctors and Patients</a>
+       			<a ng-click="myFilter={section:'1'}" type="button" data-toggle="tab">
+                Section 1</a>
 			</li>
 			<li ng-model="death">
-				<a ng-click="myFilter={category:'Life and Death'}" type="button" data-toggle="tab">Life and Death</a>
+				<a ng-click="myFilter={section:'2'}" type="button" data-toggle="tab">Section 2</a>
 			</li>
+            <li ng-model="four">
+                <a ng-click="myFilter={section:'3'}" type="button" data-toggle="tab">Section 3</a>
+            </li>
+            <li ng-model="five">
+                <a ng-click="myFilter={section:'4'}" type="button" data-toggle="tab">Section 4</a>
 		</ul>
 	</div>
 	<div id="pitchContent">
@@ -73,20 +79,27 @@
 
                 <div class="modal-body">
 				<form ng-model="pitch">
-                    <label>Category: </label>
+                    <label>Section: </label>
                     <label class="radio-inline">
-                        <input name="category" id="doctor" value="Doctor and Patient" type="radio" required>Doctor and Patient
+                        <input name="section" id="pitchOne" value="1" type="radio" required>1
                     </label>
                     <label class="radio-inline">
-                        <input name="category" id="death" value="Life and Death" type="radio" required>Life and Death
+                        <input name="section" id="pitchTwo" value="2" type="radio" required>2
                     </label>
+                    <label class="radio-inline">
+                        <input name="section" id="pitchThree" value="3" type="radio" required>3
+                    </label>
+                    <label class="radio-inline">
+                        <input name="section" id="pitchFour" value="4" type="radio" required>4
+                    </label>
+                </br>
 
                     <label>Topic: </br>
-                        <textarea id="pitchTopic" Placeholder="Euthanasia" style="width: 300px; height: 50px;" required></textarea>
+                        <textarea id="pitchTopic" Placeholder="Intersectionality" style="width: 300px; height: 50px;" required></textarea>
                     </label>
 
-                    <label>Name: </br>
-                        <textarea id="pitchName" Placeholder="Rory Gilmore" style="width: 300px; height: 50px;" required></textarea>
+                    <label>Names: </br>
+                        <textarea id="pitchNames" Placeholder="Rory Gilmore, Lorelai Gilmore" style="width: 300px; height: 50px;" required></textarea>
                     </label>
                     <label>Link: </br>
                      	<p><span class="gray">1) Go to your youTube video. Click on Share > Embed.</span></p>

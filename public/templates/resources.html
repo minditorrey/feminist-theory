@@ -2,7 +2,7 @@
 
 <section id="resourceFeature" class="feature-image feature-image-default" data-type="background" data-speed="2">
 	<h1>Resources</h1>
-		<p>Add resources here, including links to videos, articles, interviews, etc. Resources must be relevant to the chapter issues and must come from a reliable source (e.g., not the onion).</p>
+		<p>Add resources here, including links to videos, articles, interviews, etc. Resources must be relevant to the course readings and must come from a reliable source (e.g., not the onion or your friend Stacey's blog).</p>
 </section>
 
 <!-- Main Content -->
@@ -13,33 +13,19 @@
 	</div>
 	<div id="resourceTabs" class="container">	
 		<ul class="nav nav-pills">
+            <li ng-model="one">
+                <a ng-click="myFilter={section:'1'}" type="button" data-toggle="tab">Section 1</a>
+            </li>
 			<li ng-model="two">
-       			<a ng-click="myFilter={chapter:'2'}" type="button" data-toggle="tab">Chapter 2</a>
+       			<a ng-click="myFilter={chapter:'2'}" type="button" data-toggle="tab">Section 2</a>
 			</li>
 			<li ng-model="three">
-				<a ng-click="myFilter={chapter:'3'}" type="button" data-toggle="tab">Chapter 3</a>
+				<a ng-click="myFilter={chapter:'3'}" type="button" data-toggle="tab">Section 3</a>
 			</li>
 			<li ng-model="four">
-				<a ng-click="myFilter={chapter:'4'}" type="button" data-toggle="tab">Chapter 4</a>
+				<a ng-click="myFilter={chapter:'4'}" type="button" data-toggle="tab">Section 4</a>
 			</li>
-  			<li ng-model="five">
-  				<a ng-click="myFilter={chapter:'5'}" type="button" data-toggle="tab">Chapter 5</a>
-			</li>
-			<li ng-model="six">
-  				<a ng-click="myFilter={chapter:'6'} "type="button" data-toggle="tab">Chapter 6</a>
-			</li>
-			<li ng-model="seven">
-  				<a ng-click="myFilter={chapter:'7'}" type="button" data-toggle="tab">Chapter 7</a>
-			</li>
-			<li ng-model="eight">
-  				<a ng-click="myFilter={chapter:'8'}" type="button" data-toggle="tab">Chapter 8</a>
-			</li>			
-			<li ng-model="nine">
-  				<a ng-click="myFilter={chapter:'9'}" type="button" data-toggle="tab">Chapter 9</a>
-			</li>
-			<li ng-model="ten">
-  				<a ng-click="myFilter={chapter:'10'}" type="button" data-toggle="tab">Chapter 10</a>
-			</li>
+
 		</ul>
 	</div>
 	<div id="resourceContent">
@@ -91,44 +77,29 @@
 
                 <div class="modal-body">
 				<form ng-model="resource">
-                    <label>Chapter: </label><br>
+                    <label>Section: </label><br>
                     <label class="radio-inline">
-                        <input name="chapter" id="ctwo" value="2" type="radio" required>2
+                        <input name="section" id="cone" value="1" type="radio">1
                     </label>
                     <label class="radio-inline">
-                        <input name="chapter" id="cthree" value="3" type="radio" required>3
+                        <input name="section" id="ctwo" value="2" type="radio" required>2
                     </label>
                     <label class="radio-inline">
-                        <input name="chapter" id="cfour" value="4" type="radio">4
+                        <input name="section" id="cthree" value="3" type="radio" required>3
                     </label>
                     <label class="radio-inline">
-                        <input name="chapter" id="cfive" value="5" type="radio">5
+                        <input name="section" id="cfour" value="4" type="radio">4
                     </label>
-                    <label class="radio-inline">
-                        <input name="chapter" id="csix" value="6" type="radio">6
-                    </label>
-                    <label class="radio-inline">
-                        <input name="chapter" id="cseven" value="7" type="radio">7
-                    </label>
-                    <label class="radio-inline">
-                        <input name="chapter" id="ceight" value="8" type="radio">8
-                    </label>
-                    <label class="radio-inline">
-                        <input name="chapter" id="cnine" value="9" type="radio">9
-                    </label>                       
-                    <label class="radio-inline">
-                        <input name="chapter" id="cten" value="10" type="radio">10
-                    </label>
-
+                    </br>
                     <label>Topic: </br>
-                        <textarea id="resTopic" Placeholder="E.g. Informed Consent" style="width: 300px; height: 50px;" required></textarea>
+                        <textarea id="resTopic" Placeholder="E.g. Intersectionality" style="width: 300px; height: 50px;" required></textarea>
                     </label>
 
                     <label>Overview </br>
                         <textarea id="resOverview" Placeholder="This resource is about..." style="width: 500px; height: 300px;" required></textarea>
                     </label>
                     <label>Name: </br>
-                        <textarea id="resName" Placeholder="Rory Gilmore" style="width: 300px; height: 50px;" required></textarea>
+                        <textarea id="resName" Placeholder="Your Name" style="width: 300px; height: 50px;" required></textarea>
                     </label>
                      <label>Link </br>
                         <textarea id="resLink" Placeholder="www.yourlink.com" style="width: 300px; height: 50px;" required></textarea>

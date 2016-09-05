@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 
 var resourceSchema = new mongoose.Schema({
     name: { type: String, required: true },
-    chapter: { type: String, required: true },
+    section: { type: String, required: true },
     topic: {type: String, required: true },
     link: {type: String, required: true },
     overview: { type: String, required: true },
