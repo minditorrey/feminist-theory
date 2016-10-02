@@ -40,7 +40,7 @@
 		<div class="pitches row">	
 			<div class="col-sm-8 col-sm-offset-2 well" class="container" ng-repeat="pitch in pitches | filter: sortByName |filter: myFilter">
 			<h2>{{pitch.topic}}</h2>
-			<h6>Category: {{pitch.category}}</h6>
+			<h6>Section: {{pitch.section}}</h6>
 			<hr>
 			<div class="embed-responsive embed-responsive-4by3">
 				<iframe width="720" height="485" ng-src="{{pitch.link}}" frameborder="0" allowfullscreen></iframe>
